@@ -69,8 +69,6 @@ def main():
                 publisher.send_string(command)
                 print(f"Sent: {command}")
 
-            time.sleep(0.1)  # Small delay to avoid overwhelming the console
-
     finally:
         # Clean up
         subscriber.close()
