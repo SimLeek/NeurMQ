@@ -62,7 +62,7 @@ async def main():
             logger.warning(f"No audio stream at {audio_url}: {e.stderr.decode()}")
 
         # Capture video streams
-        for port in range(base_port, base_port + max_cameras)
+        for port in range(base_port, base_port + max_cameras):
             stream_url = f"udp://127.0.0.1:{port}"
             try:
                 probe = ffmpeg.probe(stream_url, timeout=2)
